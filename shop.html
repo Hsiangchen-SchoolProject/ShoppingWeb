@@ -6,6 +6,7 @@
     <title>shop</title>
     <link rel="Shortcut Icon" type="image/x-icon" href="img/bread.png" />
 </head>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/side-shop-cart.css">
 <link rel="stylesheet" href="css/shop.css">
@@ -627,8 +628,10 @@
     </div>
     <!-- footer -->
     <div id="footer"></div>
-    <!-- <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script> -->
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
     <script type="text/javascript">
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
 
         $(function() {
             var w = $("#slider_content").width();
@@ -650,9 +653,7 @@
 
 
         });
-        </script>
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script>
+
         var didScroll;
         var lastScrollTop = 0;
         var delta = 5;
